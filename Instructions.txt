@@ -1,0 +1,7 @@
+This script detects whether laptop is charging or not, and opens/kills apps depending on it,
+if laptop is on charging, the script will start the programs listed in "Programs.txt" which the script creates on its first run.
+
+The script has to be run in the background, DO NOT KILL.
+It updates every X seconds, default is 60, but you can choose your own time by adding a number in the first line of "Programs.txt".
+
+Look in sample Programs.txt provided for help.

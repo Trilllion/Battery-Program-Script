@@ -41,13 +41,14 @@ def createFile():
     try:
         File = open(ob.dirPath + "\\Programs.txt", "x")
         print("Creating new Programs list file in " + ob.dirPath)
-        print("Please open the txt file, and add programs line by line")
+        print("Please open the txt file, and add programs line by line, first line can contain a number for update frequency.")
         print("Then restart the python script")
         File.close()
     #Try opening file
     except Exception as e:
         filePath = ob.dirPath + '\\Programs.txt'
         ob.filePath = filePath
+        print("First line can contain a number for update frequency")
         print("File already exists at " + filePath)
         print("Opening programs file")
         file = open(filePath.strip(), 'r')
@@ -60,9 +61,9 @@ def getTimePeriod():
     try:
         timer = int(ob.programList[0])
         ob.checkFrequency = timer
-        print("Using custom Value")
+        print("Using custom value for update frequency")
     except ValueError :
-        print("Using Defaults")
+        print("Using defaults for update frequency")
 
 #Class object
 ob = process()
